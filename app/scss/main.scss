@@ -71,52 +71,52 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
+    
             @include respondMin(lgTo) {
                 width: 100%;
             }
-
+    
             @include respondCustom(576px, 767px) {
                 height: 600px;
             }
-
+    
             @include respondCustom(0, 575px) {
                 height: 460px;
             }
-
+    
             &_slides {
                 width: 100%;
             }
-
+    
             &_slide {
                 height: 700px;
-
+    
                 @include respondCustom(576px, 767px) {
                     height: 540px;
                 }
-
+    
                 @include respondCustom(0, 575px) {
                     height: 400px;
                 }
             }
-
+    
             &_slide1 {
                 background: url(../img/mainTask_slide1.png) no-repeat center;
                 background-size: contain;
             }
-
+    
             &_slide2 {
                 background: url(../img/mainTask_slide2.png) no-repeat center;
                 background-size: contain;
             }
-
+    
             &_slide3 {
                 background: url(../img/mainTask_slide3.png) no-repeat center;
                 background-size: contain;
             }
-
+    
             .owl-nav {
-
+    
                 .owl-prev {
                     width: 45px;
                     height: 14px;
@@ -126,7 +126,7 @@
                     left: 8%;
                     bottom: 8%;
                     outline: none;
-
+    
                     &:active {
                         transform: rotate(0deg);
                         background: url(../img/slideBtn_arrow_active.png) no-repeat;
@@ -136,7 +136,7 @@
                         display: none;
                     }
                 }
-
+    
                 .owl-next {
                     width: 45px;
                     height: 14px;
@@ -145,18 +145,18 @@
                     right: 8%;
                     bottom: 8%;
                     outline: none;
-
+    
                     &:active {
                         transform: rotate(180deg);
                         background: url(../img/slideBtn_arrow_active.png) no-repeat;
                     }
-
+    
                     span {
                         display: none;
                     }
                 }
             }
-
+    
             .owl-dots {
                 position: absolute;
                 bottom: 7%;
@@ -164,7 +164,7 @@
                 .owl-dot {
                     width: 30px;
                     outline: none;
-
+    
                     span {
                         width: 11px;
                         height: 11px;
@@ -172,7 +172,7 @@
                         border-radius: 0;
                     }
                 }
-
+    
                 .active {
                     span {
                         background-color: #a81f22;
@@ -456,6 +456,211 @@
                 @include respondCustom(0, 575px) {
                     width: 300px;
                 }
+            }
+        }
+    }
+
+    .result {
+        padding: 50px 0;
+        background: linear-gradient(to bottom, #fafafa 34%,#ffffff 34%);
+        text-align: center;
+
+        &_content {
+            margin-bottom: 44px;
+
+            @include respondMin(lgTo) {
+                text-align: center;
+            }
+
+            &_title {
+                width: 210px;
+                height: 52px;
+                color: #010101;
+                font-size: 32px;
+                font-family: $ProximaNova-Semibold;
+                background: #ffffff;
+                box-shadow: 0 0 27px rgba(200, 208, 212, 0.52);
+                border-left: 2px solid #ce3a41;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 32px;
+
+                @include respondMin(lgTo) {
+                    margin: 0 auto 32px;
+                }
+            }
+
+            &_desc {
+                width: 1020px;
+                color: #1b1b24;
+                font-size: 18px;
+                font-family: $ProximaNova-Regular;
+                line-height: 30px;
+
+                @include respondMin(lgTo) {
+                    width: 100%;
+                }
+
+                span {
+                    font-family: $ProximaNova-Semibold;
+                }
+            }
+        }
+
+        &_slider {
+            width: 1170px;
+            height: 800px;
+            padding: 50px 0 6px;
+            border-radius: 6px;
+            box-shadow: 0 0 27px rgba(200, 208, 212, 0.52);
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    
+            @include respondMin(lgTo) {
+                width: 100%;
+            }
+    
+            @include respondCustom(576px, 767px) {
+                height: 600px;
+            }
+    
+            @include respondCustom(0, 575px) {
+                height: 460px;
+            }
+    
+            &_slides {
+                width: 100%;
+            }
+    
+            &_slide {
+                height: 700px;
+    
+                @include respondCustom(576px, 767px) {
+                    height: 540px;
+                }
+    
+                @include respondCustom(0, 575px) {
+                    height: 400px;
+                }
+            }
+    
+            &_slide1 {
+                background: url(../img/result_slide1.png) no-repeat center;
+                background-size: contain;
+            }
+    
+            &_slide2 {
+                background: url(../img/result_slide2.png) no-repeat center;
+                background-size: contain;
+            }
+    
+            &_slide3 {
+                background: url(../img/result_slide3.png) no-repeat center;
+                background-size: contain;
+            }
+    
+            .owl-nav {
+    
+                .owl-prev {
+                    width: 45px;
+                    height: 14px;
+                    background: url(../img/slideBtn_arrow.png) no-repeat;
+                    transform: rotate(180deg);
+                    position: absolute;
+                    left: 8%;
+                    bottom: 10%;
+                    outline: none;
+    
+                    &:active {
+                        transform: rotate(0deg);
+                        background: url(../img/slideBtn_arrow_active.png) no-repeat;
+                    }
+                    
+                    span {
+                        display: none;
+                    }
+                }
+    
+                .owl-next {
+                    width: 45px;
+                    height: 14px;
+                    background: url(../img/slideBtn_arrow.png) no-repeat;
+                    position: absolute;
+                    right: 8%;
+                    bottom: 10%;
+                    outline: none;
+    
+                    &:active {
+                        transform: rotate(180deg);
+                        background: url(../img/slideBtn_arrow_active.png) no-repeat;
+                    }
+    
+                    span {
+                        display: none;
+                    }
+                }
+            }
+    
+            .owl-dots {
+                position: absolute;
+                bottom: 9%;
+                
+                .owl-dot {
+                    width: 30px;
+                    outline: none;
+    
+                    span {
+                        width: 11px;
+                        height: 11px;
+                        background-color: #bfbfbf;
+                        border-radius: 0;
+                    }
+                }
+    
+                .active {
+                    span {
+                        background-color: #a81f22;
+                    }
+                }
+            }
+
+            &_pos {
+                color: #9b9b9b;
+                font-size: 14px;
+                font-family: $ProximaNova-Regular;
+                margin-top: 54px;    
+            }
+        }
+
+        &_price {
+            color: #1b1b24;
+            font-family: $ProximaNova-Semibold;
+            font-size: 26px;
+            line-height: 30px;
+            margin: 50px 0 84px;
+
+            span {
+                color: #a81f22;
+            }
+        }
+
+        &_btn {
+            color: #0245ed;
+            font-family: $ProximaNova-Regular;
+            font-size: 16px;
+            width: 262px;
+            height: 52px;
+            border: 3px solid #0245ed;
+            background: #fff;
+            cursor: pointer;
+
+            &:active {
+                color: #fff;
+                background: #0245ed;
             }
         }
     }
