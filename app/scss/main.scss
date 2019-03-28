@@ -1,0 +1,208 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "./_mixins/media"; // Always at the end
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+
+    @include respondMin(lgTo) {
+        width: 100%;
+    }
+}
+
+.mainWrap {
+    
+    .mainTask {
+        padding: 50px 0 80px;
+        background: linear-gradient(to bottom, #fafafa 34%,#ffffff 34%);
+
+        &_content {
+            margin-bottom: 50px;
+
+            @include respondMin(lgTo) {
+                text-align: center;
+            }
+
+            &_title {
+                width: 304px;
+                height: 52px;
+                color: #010101;
+                font-size: 32px;
+                font-family: $ProximaNova-Semibold;
+                background: #ffffff;
+                box-shadow: 0 0 27px rgba(200, 208, 212, 0.52);
+                border-left: 2px solid #ce3a41;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 31px;
+
+                @include respondMin(lgTo) {
+                    margin: 0 auto 31px;
+                }
+            }
+
+            &_desc {
+                width: 968px;
+                color: #1b1b24;
+                font-size: 18px;
+                font-family: $ProximaNova-Regular;
+                line-height: 30px;
+
+                @include respondMin(lgTo) {
+                    width: 100%;
+                }
+
+                span {
+                    font-family: $ProximaNova-Semibold;
+                }
+            }
+        }
+
+        &_slider {
+            width: 1170px;
+            height: 760px;
+            padding: 50px 0;
+            border-radius: 6px;
+            box-shadow: 0 0 27px rgba(200, 208, 212, 0.52);
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include respondMin(lgTo) {
+                width: 100%;
+            }
+
+            @include respondCustom(576px, 767px) {
+                height: 600px;
+            }
+
+            @include respondCustom(0, 575px) {
+                height: 460px;
+            }
+
+            &_slides {
+                width: 100%;
+            }
+
+            &_slide {
+                height: 700px;
+
+                @include respondCustom(576px, 767px) {
+                    height: 540px;
+                }
+
+                @include respondCustom(0, 575px) {
+                    height: 400px;
+                }
+            }
+
+            &_slide1 {
+                background: url(../img/mainTask_slide1.png) no-repeat center;
+                background-size: contain;
+            }
+
+            &_slide2 {
+                background: url(../img/mainTask_slide2.png) no-repeat center;
+                background-size: contain;
+            }
+
+            &_slide3 {
+                background: url(../img/mainTask_slide3.png) no-repeat center;
+                background-size: contain;
+            }
+
+            .owl-nav {
+
+                .owl-prev {
+                    width: 45px;
+                    height: 14px;
+                    background: url(../img/slideBtn_arrow.png) no-repeat;
+                    transform: rotate(180deg);
+                    position: absolute;
+                    left: 8%;
+                    bottom: 8%;
+                    outline: none;
+
+                    &:active {
+                        transform: rotate(0deg);
+                        background: url(../img/slideBtn_arrow_active.png) no-repeat;
+                    }
+                    
+                    span {
+                        display: none;
+                    }
+                }
+
+                .owl-next {
+                    width: 45px;
+                    height: 14px;
+                    background: url(../img/slideBtn_arrow.png) no-repeat;
+                    position: absolute;
+                    right: 8%;
+                    bottom: 8%;
+                    outline: none;
+
+                    &:active {
+                        transform: rotate(180deg);
+                        background: url(../img/slideBtn_arrow_active.png) no-repeat;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            .owl-dots {
+                position: absolute;
+                bottom: 7%;
+                
+                .owl-dot {
+                    width: 30px;
+                    outline: none;
+
+                    span {
+                        width: 11px;
+                        height: 11px;
+                        background-color: #bfbfbf;
+                        border-radius: 0;
+                    }
+                }
+
+                .active {
+                    span {
+                        background-color: #a81f22;
+                    }
+                }
+            }
+        }
+    }
+
+    .task {
+        padding: 70px 0 80px;
+        background: #FAFAFA;
+
+        &_title {
+            width: 150px;
+            height: 52px;
+            color: #010101;
+            font-size: 32px;
+            font-family: $ProximaNova-Semibold;
+            background: #ffffff;
+            box-shadow: 0 0 27px rgba(200, 208, 212, 0.52);
+            border-left: 2px solid #ce3a41;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 31px;
+
+            @include respondMin(lgTo) {
+                margin: 0 auto 31px;
+            }
+        }
+    }
+}
