@@ -182,11 +182,67 @@
 				<button class="result_btn">Посмотреть другие сайты</button>
 			</div>
 		</section>
+		<section class="applicationForm">
+			<div class="applicationForm_container">
+				<div class="applicationForm_inner">
+					<form method="post" action="action.php" class="form">
+						<legend class="form_title">Оставить заявку <span>Возможно мы знакомы близко с тематикой вашего бизнеса</span></legend>
+						<fieldset>
+							<div class="form_data">
+								<input placeholder="Имя*" type="text" id="name" name="name" class="form_item" required>
+								<input placeholder="Телефон*" type="tel" id="tel" name="tel" class="form_item" required>
+								<input placeholder="E-mail" type="email" id="email" name="email" class="form_item">
+							</div>
+							<h4 class="form_servicesTitle">Выбрать услуги</h4>
+							<div class="form_services">
+								<label class="form_check"><input type="checkbox" name="development"><span></span>Разработка сайта</label>
+								<label class="form_check"><input type="checkbox" name="service"><span></span>Обслуживание сайта</label>
+								<label class="form_check"><input type="checkbox" name="marketing"><span></span>Контекстная реклама</label>
+								<label class="form_check"><input type="checkbox" name="promotion"><span></span>Продвижение сайта</label>
+								<label class="form_check"><input type="checkbox" name="modification"><span></span>Продвижение сайта</label>
+								<label class="form_check"><input type="checkbox" name="More"><span></span>Другое</label>
+							</div>
+							<div class="form_sending">
+								<textarea placeholder="Описание вашей задачи" id="description" class="form_description"
+									name="description" required></textarea>
+								<label class="form_check form_agreed"><input type="checkbox" name="agreed"><span></span>Согласен на
+									<span class="form_agreed_blueText">обработку персональных данных</span></label>
+								<button type="submit" id="sendBtn" name="sendBtn" class="form_sendBtn">Оставить заявку</button>
+							</div>
+						</fieldset>
+					</form>
+					<article class="callback">
+						<h3 class="callback_title">Просто свяжитесь с нами</h3>
+						<p class="callback_time">Мы работаем с 10:00 до 19:00.</p>
+						<p class="callback_call">Звоните по телефонам:</p>
+						<a class="callback_phone1 callback_phone" href="tel:+78462335960" role="link">+7 (846) 233-58-46</a>
+						<a class="callback_phone2 callback_phone" href="tel:+74994000868" role="link">+7 (499) 400-08-68</a>
+						<a class="callback_phone3 callback_phone" href="tel:88003330421" role="link">8-800-333-04-21</a>
+						<p class="callback_popup"><a id="callbackPopup" class="callback_popup_inner">Оставьте номер</a> и мы сами позвоним вам!</p>
+						<p class="callback_email">Пишите письма: <a class="callback_email_inner" href="mailto:info@relevant.ru">Info@relevant.ru</a></p>
+					</article>
+
+					<!-- Popup -->
+
+					<div id="popup" class="popup">
+						<div id="closePopup" class="popup_close">X</div>
+						<form method="post" action="action.php" class="popup_form">
+							<input placeholder="Имя*" type="text" id="name" name="name" class="form_item" required>
+							<input placeholder="Телефон*" type="tel" id="popupTel" name="tel" class="form_item" required>
+							<button type="submit" id="sendBtn" name="sendBtn" class="form_sendBtn">Оставить заявку</button>
+						</form>
+					</div>
+
+					<!-- Popup -->
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<!-- Custom HTML END -->
 
 	<script src="js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 	<script src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
